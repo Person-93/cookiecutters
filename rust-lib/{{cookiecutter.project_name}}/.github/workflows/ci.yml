@@ -1,3 +1,4 @@
+{% raw -%}
 name: CI
 on: [ push, pull_request ]
 jobs:
@@ -45,3 +46,4 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: test-all-features
+{% endraw %}
