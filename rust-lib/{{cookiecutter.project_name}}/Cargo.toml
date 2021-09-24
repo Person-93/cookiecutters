@@ -1,0 +1,9 @@
+[package]
+name = "tagged-hash-tree"
+authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
+version = "0.1.0-dev"
+edition = "2018"
+description = "{{ cookiecutter.description }}"
+license = "MIT"
+
+[dependencies]
