@@ -1,5 +1,5 @@
 [package]
-name = "tagged-hash-tree"
+name = "{{ cookiecutter.project_name }}"
 authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
 version = "0.1.0-dev"
 edition = "2018"
