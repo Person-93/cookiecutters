@@ -1,3 +1,4 @@
+{% raw -%}
 on: [push, pull_request]
 name: Clippy check
 jobs:
@@ -14,3 +15,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: --all-features
+{% endraw %}
