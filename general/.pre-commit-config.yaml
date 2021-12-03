@@ -24,6 +24,10 @@ repos:
       - id: git-check
       - id: script-must-have-extension
       - id: script-must-not-have-extension
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.8.0
+    hooks:
+      - id: shellcheck
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v5.0.0
     hooks:
