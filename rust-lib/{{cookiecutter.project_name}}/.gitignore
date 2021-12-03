@@ -1,4 +1,6 @@
 /.idea/
 /target/
-Cargo.lock
+{% if cookiecutter.ignore_lock_file == 'true' -%}
+    Cargo.lock
+{% endif -%}
 tmp.rs

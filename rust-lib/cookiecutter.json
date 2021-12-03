@@ -3,5 +3,6 @@
     "email": null,
     "project_name": null,
     "description": null,
+    "ignore_lock_file": ["true", "false"],
     "directory_name": "{{cookiecutter.project_name}}"
 }
