@@ -4,7 +4,7 @@ Some cookiecutters I find handly.
 
 ## License
 
-Licensed under the [MIT](LICENSE-MIT.txt) or [Apache](LICENSE-APACHE)
+Licensed under the [MIT](LICENSE-MIT.txt) or [Apache](LICENSE-APACHE.txt)
 license at your option.
 
 ## Contribution
