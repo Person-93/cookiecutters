@@ -4,9 +4,11 @@
 
 ## License
 
-Licensed under the MIT license.
+Licensed under the [MIT](LICENSE-MIT.txt) or [Apache](LICENSE-APACHE)
+license at your option.
 
 ## Contribution
 
-Any contribution submitted for inclusion in this work shall be licensed as
-above without any additional terms and conditions.
+Unless stated otherwise, any contribution submitted for inclusion in
+this work shall be licensed as above without and additional terms
+and conditions.

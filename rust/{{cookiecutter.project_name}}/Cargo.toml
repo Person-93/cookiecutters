@@ -4,6 +4,6 @@ authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
 version = "0.1.0-dev"
 edition = "2021"
 description = "{{ cookiecutter.description }}"
-license = "MIT"
+license = "MIT OR APACHE"
 
 [dependencies]
