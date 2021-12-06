@@ -7,4 +7,8 @@ echo "exclude: '/.yarn/.*'" \
     | .pre-commit-config.yaml.tmp \
     && mv .pre-commit-config.yaml.tmp .pre-commit-config.yaml
 
-exec yarn
+yarn
+
+git init
+git add .
+git commit -m "chore: initial commit"
