@@ -2,4 +2,9 @@
 set -euo pipefail
 shopt -s inherit_errexit
 
+echo "exclude: '/.yarn/.*'" \
+    | cat - .pre-commit-config.yaml \
+    | .pre-commit-config.yaml.tmp \
+    && mv .pre-commit-config.yaml.tmp .pre-commit-config.yaml
+
 exec yarn
