@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+shopt -s inherit_errexit
+
+git init
+./setup-dev-environment
+git add .
+git commit -m "chore: initial commit"
