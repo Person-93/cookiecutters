@@ -1,0 +1,26 @@
+{
+    "name": "{{ cookiecutter.project_name }}",
+    "version": "0.1.0-dev",
+    "description": "{{ cookiecutter.description }}",
+    "author": {
+        "name": "{{ cookiecutter.author }}",
+        "email": "{{ cookiecutter.email }}"
+    },
+    "main": "dist/index.js",
+    "private": true,
+    "license": "MIT OR APACHE",
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint --fix && prettier --write .",
+        "lint-check": "eslint && prettier --check .",
+        "test": "true"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.31.0",
+        "@typescript-eslint/parser": "^4.31.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "prettier": "2.4.0",
+        "typescript": "^4.5.2"
+    }
+}

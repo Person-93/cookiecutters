@@ -4,5 +4,6 @@ repos:
     rev: v4.0.1
     hooks:
       - id: check-added-large-files
+        exclude: 'ts//{{cookiecutter.project_name}}///.yarn/.*'
       - id: check-case-conflict
       - id: check-symlinks

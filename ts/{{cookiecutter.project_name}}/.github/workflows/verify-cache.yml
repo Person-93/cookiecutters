@@ -1,0 +1,18 @@
+name: verify-cache
+on:
+  push:
+    paths:
+      - '.yarn/cache/*'
+  pull_request:
+    paths:
+      - '.yarn/cache/*'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - run: yarn install --immutable --immutable-cache --check-cache
