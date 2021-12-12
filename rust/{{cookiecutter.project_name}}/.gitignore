@@ -1,6 +1,6 @@
 /.idea/
 /target/
 {% if cookiecutter.ignore_lock_file == 'true' -%}
-    Cargo.lock
+    /Cargo.lock
 {% endif -%}
 tmp.rs
