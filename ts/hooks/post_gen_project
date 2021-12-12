@@ -2,7 +2,7 @@
 set -euo pipefail
 shopt -s inherit_errexit
 
-echo "exclude: '^(.yarn/|.pnp.cjs)'" \
+echo "exclude: '^(\.yarn/|\.pnp\..*)'" \
     | cat - .pre-commit-config.yaml \
     > .pre-commit-config.yaml.tmp
 
