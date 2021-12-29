@@ -2,6 +2,8 @@
 set -euo pipefail
 shopt -s inherit_errexit
 
+cargo generate-lockfile
+
 git init
 ./setup-dev-environment
 git add .
