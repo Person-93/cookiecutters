@@ -1,0 +1,7 @@
+{
+  "author": null,
+  "email": null,
+  "npm_scope": "{{ cookiecutter.author }}",
+  "project_name": null,
+  "description": null
+}

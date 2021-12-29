@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -euo pipefail
+shopt -s inherit_errexit
+
+readonly project_name='{{ cookiecutter.project_name }}'
+readonly scope='{{ cookiecutter.npm_scope }}'
+
+cd ..
+
+yarn create nx-workspace "${project_name}" \
+    --style="scss" --preset=apps --npmScope="${scope}" \
+    --defaultBase=master --skipInstall --commit=false \
+    --packageManager=yarn --nxCloud=false
+
+cd "${project_name}"
+
+yarn set version berry
+yarn config set nodeLinker pnp
+
+rm .prettierrc .prettierignore
+ln -s .eslintignore .prettierignore
+
+cat << EOF >> .gitignore
+
+# yarn
+/.yarn/*
+!/.yarn/cache
+!/.yarn/patches
+!/.yarn/plugins
+!/.yarn/releases
+!/.yarn/sdks
+!/.yarn/versions
+EOF

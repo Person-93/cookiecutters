@@ -1,0 +1,8 @@
+{
+  "description": "{{ cookiecutter.description }}",
+  "license": "(MIT OR APACHE)",
+  "author": {
+    "name": "{{ cookiecutter.author }}",
+    "email": "{{ cookiecutter.email }}"
+  }
+}
