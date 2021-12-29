@@ -10,5 +10,5 @@ license at your option.
 ## Contribution
 
 Unless stated otherwise, any contribution submitted for inclusion in
-this work shall be licensed as above without and additional terms
+this work shall be licensed as above without any additional terms
 and conditions.
