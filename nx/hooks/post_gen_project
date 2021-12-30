@@ -10,7 +10,7 @@ mv tmp.json package.json
 # add properties to nx.json
 jq -s '.[0] * .[1]' nx.json nx.merge.json > tmp.json
 rm nx.merge.json
-mv tmp.json package.json
+mv tmp.json nx.json
 
 
 echo "exclude: '^(\.yarn/|\.pnp\..*)'" \
