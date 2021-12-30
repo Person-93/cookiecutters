@@ -4,5 +4,8 @@
   "author": {
     "name": "{{ cookiecutter.author }}",
     "email": "{{ cookiecutter.email }}"
+  },
+  "scripts": {
+    "nxg": "nx generate"
   }
 }
