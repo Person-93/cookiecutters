@@ -1,0 +1,7 @@
+{
+  "generators": {
+    "@nrwl/workspace:library": {
+      "buildable": true
+    }
+  }
+}

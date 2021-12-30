@@ -7,6 +7,12 @@ jq -s '.[0] * .[1]' package.json package.merge.json > tmp.json
 rm package.merge.json
 mv tmp.json package.json
 
+# add properties to nx.json
+jq -s '.[0] * .[1]' nx.json nx.merge.json > tmp.json
+rm nx.merge.json
+mv tmp.json package.json
+
+
 echo "exclude: '^(\.yarn/|\.pnp\..*)'" \
     | cat - .pre-commit-config.yaml \
     > .pre-commit-config.yaml.tmp
