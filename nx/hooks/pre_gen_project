@@ -14,20 +14,5 @@ yarn create nx-workspace "${project_name}" \
 
 cd "${project_name}"
 
-yarn set version berry
-yarn config set nodeLinker pnp
-
 rm .prettierrc .prettierignore
 ln -s .eslintignore .prettierignore
-
-cat << EOF >> .gitignore
-
-# yarn
-/.yarn/*
-!/.yarn/cache
-!/.yarn/patches
-!/.yarn/plugins
-!/.yarn/releases
-!/.yarn/sdks
-!/.yarn/versions
-EOF
