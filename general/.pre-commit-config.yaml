@@ -20,7 +20,6 @@ repos:
     hooks:
       - id: check-mailmap
       - id: forbid-binary
-        exclude: (.*(woff2?|ttf)|logo.png)$
       - id: git-check
       - id: script-must-have-extension
       - id: script-must-not-have-extension
