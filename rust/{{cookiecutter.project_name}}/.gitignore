@@ -1,5 +1,1 @@
 /target/
-{% if cookiecutter.ignore_lock_file == 'true' -%}
-    /Cargo.lock
-{% endif -%}
-tmp.rs
