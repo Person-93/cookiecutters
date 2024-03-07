@@ -4,5 +4,6 @@
     "project_name": null,
     "description": null,
     "directory_name": "{{cookiecutter.project_name}}",
+    "with_main": false,
     "_copy_without_render": [".yarn/*", ".github/**/*"]
 }

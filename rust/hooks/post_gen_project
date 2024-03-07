@@ -2,6 +2,14 @@
 set -euo pipefail
 shopt -s inherit_errexit
 
+{% if cookiecutter.with_main %}
+cat > src/main.rs << RS
+#![forbid(unsafe_code)]
+
+fn main() {}
+RS
+{% endif %}
+
 cargo generate-lockfile
 
 git init
