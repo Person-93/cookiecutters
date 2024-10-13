@@ -1,0 +1,69 @@
+[package]
+name = "{{ cookiecutter.project_name }}"
+authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
+version = "0.0.0"
+edition = "2021"
+description = "{{ cookiecutter.description }}"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[features]
+dev = [
+  "bevy/asset_processor",
+  "bevy/dynamic_linking",
+  "bevy/embedded_watcher",
+  "bevy/file_watcher",
+]
+
+[dependencies]
+bevy_tweening = "0.11.0"
+leafwing-input-manager = "0.15"
+
+[dependencies.bevy]
+version = "0.14.2"
+default-features = false
+features = [
+  # Bevy functionality:
+  "animation",
+  "bevy_asset",
+  "bevy_audio",
+  "bevy_core_pipeline",
+  "bevy_gilrs",
+  "bevy_gizmos",
+  "bevy_render",
+  "bevy_scene",
+  "bevy_sprite",
+  "bevy_text",
+  "bevy_ui",
+  "bevy_winit",
+  "default_font",
+  "multi_threaded",
+  "tonemapping_luts",
+
+  # file formats:
+  "flac",
+  "png",
+  "tga",
+
+  # platform-specific
+  "x11",
+]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.dev.package.wgpu-types]
+debug-assertions = false
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
+incremental = false
+debug = false

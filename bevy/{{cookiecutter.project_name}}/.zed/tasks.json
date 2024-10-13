@@ -1,0 +1,7 @@
+[
+  {
+    "label": "run with dev features",
+    "command": "cargo run --features=dev",
+    "tags": ["rust-main"]
+  }
+]
