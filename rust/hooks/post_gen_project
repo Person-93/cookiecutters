@@ -3,19 +3,17 @@ set -euo pipefail
 shopt -s inherit_errexit
 
 {% if cookiecutter.with_main %}
-cat > src/main.rs << RS
-#![forbid(unsafe_code)]
-
-fn main() {}
-RS
+echo "fn main() {}" > src/main.rs
 {% endif %}
 
 cargo generate-lockfile
 
 git init
-./setup-dev-environment
-git add .
-git commit -m "chore: initial commit"
 
 mkdir .git/info
 echo "/tmp.rs" > .git/info/exclude
+
+./setup-dev-environment
+
+git add .
+git commit -m "chore: initial commit"
