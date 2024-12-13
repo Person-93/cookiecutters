@@ -52,6 +52,9 @@ features = [
 [lints.rust]
 unsafe_code = "forbid"
 
+[lints.clippy]
+dbg_macro = "warn"
+
 [profile.dev]
 opt-level = 1
 
