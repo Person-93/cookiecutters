@@ -15,3 +15,7 @@ git add .
 git commit -m "chore: initial commit"
 
 mkdir assets
+
+set +e
+just build
+cargo rustdoc
