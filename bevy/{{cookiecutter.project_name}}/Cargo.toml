@@ -16,11 +16,15 @@ dev = [
 ]
 
 [dependencies]
-bevy_tweening = "0.11.0"
-leafwing-input-manager = "0.15"
+bevy_tweening = "0.12"
+
+[dependencies.leafwing-input-manager]
+version = "0.16"
+default-features = false
+features = ["asset", "keyboard", "mouse", "ui"]
 
 [dependencies.bevy]
-version = "0.14.2"
+version = "0.15"
 default-features = false
 features = [
   # Bevy functionality:
@@ -35,6 +39,7 @@ features = [
   "bevy_sprite",
   "bevy_text",
   "bevy_ui",
+  "bevy_window",
   "bevy_winit",
   "default_font",
   "multi_threaded",
