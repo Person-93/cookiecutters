@@ -1,5 +1,8 @@
 use bevy::prelude::*;
 
+#[macro_use]
+mod bevy_util;
+
 pub fn plugin(app: &mut App) {
   app
     .add_plugins(
