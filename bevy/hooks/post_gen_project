@@ -16,6 +16,5 @@ git commit -m "chore: initial commit"
 
 mkdir assets
 
-set +e
-just build
-cargo rustdoc
+cargo rustdoc || true
+just build || true
