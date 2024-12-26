@@ -4,6 +4,7 @@ shopt -s inherit_errexit
 
 {% if cookiecutter.with_main %}
 echo "fn main() {}" > src/main.rs
+echo "# Run the project using cargo\n[no-exit-message]\nrun:\n  cargo run" >> justfile
 {% endif %}
 
 cargo generate-lockfile

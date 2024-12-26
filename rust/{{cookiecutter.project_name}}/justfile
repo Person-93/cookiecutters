@@ -5,27 +5,27 @@ alias lint := clippy
 @default:
   just --list --justfile {{justfile()}}
 
-# Build with dev features enabled
+# Build the project using cargo
 [no-exit-message]
 build:
-  cargo build {{flags}}
+  cargo build
 
-# Run with dev features enabled
+# Run the project using cargo
 [no-exit-message]
 run:
-  cargo run {{flags}}
+  cargo run
 
-# Test with dev features enabled
+# Test the project using cargo
 [no-exit-message]
 test:
   cargo nextest run {{flags}}
 
-# Run clippy with dev features enabled
+# Run clippy on the project
 [no-exit-message]
 clippy:
   cargo clippy {{flags}}
 
-# Build documentation with dev features enabled
+# Build documentation using rustdoc
 [no-exit-message]
 doc:
   cargo rustdoc {{flags}}

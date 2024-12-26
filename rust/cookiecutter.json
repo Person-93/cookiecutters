@@ -5,5 +5,5 @@
     "description": null,
     "directory_name": "{{cookiecutter.project_name}}",
     "with_main": false,
-    "_copy_without_render": [".yarn/*", ".github/**/*"]
+    "_copy_without_render": ["justfile", ".yarn/*", ".github/**/*"]
 }
