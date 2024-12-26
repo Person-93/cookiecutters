@@ -15,6 +15,3 @@ git add .
 git commit -m "🎉 initial commit"
 
 mkdir assets
-
-cargo rustdoc || true
-just build || true
