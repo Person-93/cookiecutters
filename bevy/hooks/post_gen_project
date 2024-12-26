@@ -12,7 +12,7 @@ echo "/tmp.rs" > .git/info/exclude
 ./setup-dev-environment
 
 git add .
-git commit -m "chore: initial commit"
+git commit -m "🎉 initial commit"
 
 mkdir assets
 
