@@ -2,7 +2,7 @@
 name = "{{ cookiecutter.project_name }}"
 authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
 version = "0.0.0"
-edition = "2021"
+edition = "2024"
 description = "{{ cookiecutter.description }}"
 license = "MIT OR Apache-2.0"
 publish = false
