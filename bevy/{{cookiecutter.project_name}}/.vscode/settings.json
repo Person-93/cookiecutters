@@ -1,3 +1,9 @@
 {
-  "rust-analyzer.cargo.features": ["dev"]
+  "rust-analyzer.cargo.features": ["dev"],
+  "lldb.launch.env": {
+    "LD_LIBRARY_PATH": "${workspaceFolder}/target/debug/deps;${userHome}/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib;${env:LD_LIBRARY_PATH}"
+  },
+  "files.associations": {
+    "*.meta": "ron"
+  }
 }
