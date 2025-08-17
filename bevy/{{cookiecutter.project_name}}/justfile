@@ -32,4 +32,4 @@ clippy:
 # Build documentation with dev features enabled
 [no-exit-message]
 doc:
-  cargo rustdoc {{flags}}
+  cargo doc {{flags}}
