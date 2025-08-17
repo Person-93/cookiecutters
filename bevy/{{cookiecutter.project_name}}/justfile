@@ -1,3 +1,7 @@
+# optional file for user for recipes that don't belong
+# in version control
+import? 'local.justfile'
+
 flags := "--features=dev"
 alias lint := clippy
 
