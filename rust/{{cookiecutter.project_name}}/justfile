@@ -1,4 +1,7 @@
-flags := "--features=dev"
+# optional file for user for recipes that don't belong
+# in version control
+import? 'local.justfile'
+
 alias lint := clippy
 
 [private]
@@ -10,22 +13,22 @@ alias lint := clippy
 build:
   cargo build
 
-# Run the project using cargo
-[no-exit-message]
-run:
-  cargo run
-
 # Test the project using cargo
 [no-exit-message]
 test:
-  cargo nextest run {{flags}}
+  cargo nextest run
+
+# Run cargo check on the project
+[no-exit-message]
+check:
+  cargo check
 
 # Run clippy on the project
 [no-exit-message]
 clippy:
-  cargo clippy {{flags}}
+  cargo clippy
 
 # Build documentation using rustdoc
 [no-exit-message]
 doc:
-  cargo rustdoc {{flags}}
+  cargo doc
