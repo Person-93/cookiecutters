@@ -32,3 +32,6 @@ clippy:
 [no-exit-message]
 doc:
   cargo doc
+
+setup:
+  pre-commit install --install-hooks -t pre-commit -t commit-msg
