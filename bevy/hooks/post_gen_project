@@ -9,7 +9,7 @@ git init
 mkdir .git/info
 echo "/tmp.rs" > .git/info/exclude
 
-./setup-dev-environment
+just setup
 
 git add .
 git commit -m "🎉 initial commit"

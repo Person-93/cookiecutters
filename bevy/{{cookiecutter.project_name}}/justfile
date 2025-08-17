@@ -33,3 +33,6 @@ clippy:
 [no-exit-message]
 doc:
   cargo doc {{flags}}
+
+setup:
+  pre-commit install --install-hooks -t pre-commit -t commit-msg
