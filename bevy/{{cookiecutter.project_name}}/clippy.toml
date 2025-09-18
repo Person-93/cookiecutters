@@ -1,0 +1,28 @@
+allow-mixed-uninlined-format-args = false
+avoid-breaking-exported-api = false
+excessive-nesting-threshold = 8
+min-ident-chars-threshold = 2
+
+[[disallowed-methods]]
+path = "std::io::stdout"
+reason = "use logging macros instead"
+
+[[disallowed-methods]]
+path = "std::io::stderr"
+reason = "use logging macros instead"
+
+[[disallowed-macros]]
+path = "std::print"
+replacement = "log::info"
+
+[[disallowed-macros]]
+path = "std::println"
+replacement = "log::info"
+
+[[disallowed-macros]]
+path = "std::eprint"
+replacement = "log::error"
+
+[[disallowed-macros]]
+path = "std::eprintln"
+replacement = "log::error"
