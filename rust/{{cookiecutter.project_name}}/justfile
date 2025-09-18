@@ -4,6 +4,8 @@ import? 'local.justfile'
 
 alias lint := clippy
 
+export CARGO_TARGET_DIR := "target/just"
+
 [private]
 @default:
   just --list --justfile {{justfile()}}
@@ -15,23 +17,18 @@ build:
 
 # Test the project using cargo
 [no-exit-message]
-test:
-  cargo nextest run
-
-# Run cargo check on the project
-[no-exit-message]
-check:
-  cargo check
+test *args:
+  cargo nextest run {{args}}
 
 # Run clippy on the project
 [no-exit-message]
-clippy:
-  cargo clippy
+clippy *args: (check "{{args}}")
+  cargo clippy {{args}}
 
 # Build documentation using rustdoc
 [no-exit-message]
-doc:
-  cargo doc
+doc *args:
+  cargo doc --all-features {{args}}
 
 setup:
   pre-commit install --install-hooks -t pre-commit -t commit-msg

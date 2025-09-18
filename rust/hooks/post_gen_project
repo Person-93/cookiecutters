@@ -8,8 +8,8 @@ cat <<EOT >> justfile
 
 # Run the project using cargo
 [no-exit-message]
-run:
-  cargo run
+run *args:
+  cargo run -- {{args}}
 EOT
 {% endif %}
 

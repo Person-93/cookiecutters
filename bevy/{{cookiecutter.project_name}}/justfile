@@ -5,6 +5,8 @@ import? 'local.justfile'
 flags := "--features=dev"
 alias lint := clippy
 
+export CARGO_TARGET_DIR := "target/just"
+
 [private]
 @default:
   just --list --justfile {{justfile()}}
@@ -16,23 +18,28 @@ build:
 
 # Run with dev features enabled
 [no-exit-message]
-run:
-  cargo run {{flags}}
+run *args:
+  cargo run {{flags}} -- {{args}}
 
 # Test with dev features enabled
 [no-exit-message]
 test:
   cargo nextest run {{flags}}
 
+# Run cargo check with dev features enabled
+[no-exit-message]
+check *args:
+  cargo check {{flags}} {{args}}
+
 # Run clippy with dev features enabled
 [no-exit-message]
-clippy:
-  cargo clippy {{flags}}
+clippy *args: (check args)
+  cargo clippy {{flags}} {{args}}
 
 # Build documentation with dev features enabled
 [no-exit-message]
-doc:
-  cargo doc {{flags}}
+doc *args:
+  cargo doc --all-features {{flags}} {{args}}
 
 setup:
   pre-commit install --install-hooks -t pre-commit -t commit-msg
