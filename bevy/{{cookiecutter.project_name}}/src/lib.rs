@@ -1,5 +1,4 @@
 use bevy::{prelude::*, window::WindowResolution};
-use bevy_tweening::TweeningPlugin;
 
 #[macro_use]
 mod bevy_util;
@@ -23,7 +22,6 @@ pub fn plugin(app: &mut App) {
         ..default()
       })
       .set(ImagePlugin::default_nearest()),
-    TweeningPlugin,
     camera::plugin,
     physics::plugin,
   ));

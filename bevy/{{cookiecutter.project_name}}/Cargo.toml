@@ -1,3 +1,5 @@
+cargo-features = ["codegen-backend"]
+
 [package]
 name = "{{ cookiecutter.project_name }}"
 authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
@@ -9,23 +11,18 @@ publish = false
 
 [features]
 dev = [
-  "bevy/asset_processor",
+  "design",
   "bevy/dynamic_linking",
   "bevy/embedded_watcher",
-  "bevy/file_watcher",
+  "bevy/track_location",
 ]
 
+design = ["bevy/asset_processor", "bevy/file_watcher"]
+
 [dependencies]
-bevy_rapier2d = "0.28"
-bevy_tweening = "0.12"
 
-[dependencies.leafwing-input-manager]
+[workspace.dependencies.bevy]
 version = "0.16"
-default-features = false
-features = ["asset", "keyboard", "mouse", "ui"]
-
-[dependencies.bevy]
-version = "0.15"
 default-features = false
 features = [
   # Bevy functionality:
@@ -33,23 +30,22 @@ features = [
   "bevy_asset",
   "bevy_audio",
   "bevy_core_pipeline",
-  "bevy_gilrs",
   "bevy_gizmos",
   "bevy_render",
   "bevy_scene",
   "bevy_sprite",
+  "bevy_state",
   "bevy_text",
   "bevy_ui",
   "bevy_window",
   "bevy_winit",
-  "default_font",
   "multi_threaded",
   "tonemapping_luts",
 
   # file formats:
-  "flac",
   "png",
   "tga",
+  "wav",
 
   # platform-specific
   "x11",
@@ -57,9 +53,11 @@ features = [
 
 [profile.dev]
 opt-level = 1
+codegen-backend = "cranelift"
 
 [profile.dev.package."*"]
 opt-level = 3
+codegen-backend = "llvm"
 
 [profile.dev.package.wgpu-types]
 debug-assertions = false
