@@ -41,5 +41,10 @@ clippy *args: (check args)
 doc *args:
   cargo doc --all-features {{flags}} {{args}}
 
+# Run any cargo command with dev features
+[no-exit-message]
+cargo command *args:
+  cargo {{command}} {{flags}} {{args}}
+
 setup:
   pre-commit install --install-hooks -t pre-commit -t commit-msg
