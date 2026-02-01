@@ -37,6 +37,17 @@ check *args:
 clippy *args: (check args)
   cargo clippy {{flags}} {{args}}
 
+# Run all formatting tasks
+fmt: fmt-cargo fmt-ron
+
+# Format rust files
+fmt-cargo:
+  cargo fmt
+
+# Format ron files
+fmt-ron:
+  find assets -type f -regex ".*\.\(ron\|meta\)" -exec fmtron -t2 --input {} \;
+
 # Build documentation with dev features enabled
 [no-exit-message]
 doc *args:
