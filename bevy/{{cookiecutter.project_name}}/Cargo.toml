@@ -251,6 +251,7 @@ struct_field_names = "warn"
 # this lint is still in nursery as of 2025-09-18
 suboptimal_flops = "warn"
 suspicious_xor_used_as_pow = "warn"
+type_complexity = "allow"           # query params are complex types
 # this lint is still in nursery as of 2025-09-18
 too_long_first_doc_paragraph = "warn"
 too_many_lines = "warn"
@@ -281,7 +282,6 @@ unnecessary_semicolon = "warn"
 # this lint is still in nursery as of 2025-09-18
 unnecessary_struct_initialization = "warn"
 unnecessary_wraps = "warn"
-unneeded_field_pattern = "warn"
 unnested_or_patterns = "warn"
 unreadable_literal = "warn"
 unsafe_derive_deserialize = "warn"
