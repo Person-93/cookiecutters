@@ -12,6 +12,7 @@ publish = false
 [features]
 dev = [
   "design",
+  "bevy/debug",
   "bevy/dynamic_linking",
   "bevy/embedded_watcher",
   "bevy/track_location",
@@ -20,36 +21,36 @@ dev = [
 design = ["bevy/asset_processor", "bevy/file_watcher"]
 
 [dependencies]
+bevy.workspace = true
+bevy_asset_loader.workspace = true
+bevy_enhanced_input.workspace = true
+derive_more.workspace = true
+ron.workspace = true
+serde.workspace = true
 
-[workspace.dependencies.bevy]
-version = "0.16"
-default-features = false
-features = [
-  # Bevy functionality:
-  "animation",
-  "bevy_asset",
-  "bevy_audio",
-  "bevy_core_pipeline",
-  "bevy_gizmos",
-  "bevy_render",
-  "bevy_scene",
-  "bevy_sprite",
-  "bevy_state",
-  "bevy_text",
-  "bevy_ui",
-  "bevy_window",
-  "bevy_winit",
-  "multi_threaded",
-  "tonemapping_luts",
-
-  # file formats:
-  "png",
-  "tga",
-  "wav",
+[workspace.dependencies]
+bevy = { version = "0.18", default-features = false, features = [
+  # bevy feature collections
+  "2d_bevy_render",
+  "audio",
+  "default_app",
+  "picking",
+  "ui_bevy_render",
 
   # platform-specific
   "x11",
-]
+
+  # low level stuff
+  "std",
+] }
+bevy_asset_loader = { version = "0.25", features = [
+  "2d",
+  "standard_dynamic_assets",
+] }
+bevy_enhanced_input = "0.22"
+derive_more = { version = "2.0", features = ["display"] }
+ron = "0.12"
+serde = { version = "1.0", features = ["rc"] }
 
 [profile.dev]
 opt-level = 1
