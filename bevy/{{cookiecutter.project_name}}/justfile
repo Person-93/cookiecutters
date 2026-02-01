@@ -24,8 +24,8 @@ run *args:
 
 # Test with dev features enabled
 [no-exit-message]
-test:
-  cargo nextest run {{flags}}
+test *args:
+  cargo nextest run {{flags}} {{args}}
 
 # Run cargo check with dev features enabled
 [no-exit-message]
