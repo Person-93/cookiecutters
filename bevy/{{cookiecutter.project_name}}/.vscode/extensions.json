@@ -2,7 +2,9 @@
   "recommendations": [
     "maptz.regionfolder",
     "rust-lang.rust-analyzer",
+    "a5huynh.vscode-ron",
     "EditorConfig.EditorConfig",
-    "nefrob.vscode-just-syntax"
+    "nefrob.vscode-just-syntax",
+    "tamasfe.even-better-toml"
   ]
 }
