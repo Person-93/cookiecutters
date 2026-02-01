@@ -2,9 +2,10 @@ use bevy::{prelude::*, window::WindowResolution};
 
 #[macro_use]
 mod bevy_util;
+use crate::numeric_conversions::ToInt as _;
 
 mod camera;
-mod physics;
+mod numeric_conversions;
 
 pub fn plugin(app: &mut App) {
   app.add_plugins((
@@ -25,10 +26,11 @@ pub fn plugin(app: &mut App) {
     camera::plugin,
     physics::plugin,
   ));
+
 }
 
-const VIEWPORT_SIZE: Vec2 = Vec2 { x: 1000.0, y: 600.0 };
-const VIEWPORT_TOP_Y: f32 = VIEWPORT_SIZE.y / 2.0;
+const VIEWPORT_SIZE: UVec2 = UVec2 { x: 1000, y: 600 };
+const VIEWPORT_TOP_Y: f32 = VIEWPORT_SIZE.y as f32 / 2.0;
 const VIEWPORT_BOTTOM_Y: f32 = -VIEWPORT_TOP_Y;
-const VIEWPORT_RIGHT_X: f32 = VIEWPORT_SIZE.x / 2.0;
+const VIEWPORT_RIGHT_X: f32 = VIEWPORT_SIZE.x as f32 / 2.0;
 const VIEWPORT_LEFT_X: f32 = -VIEWPORT_RIGHT_X;
