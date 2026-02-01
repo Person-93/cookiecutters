@@ -1,7 +1,6 @@
 allow-mixed-uninlined-format-args = false
 avoid-breaking-exported-api = false
 excessive-nesting-threshold = 8
-min-ident-chars-threshold = 2
 
 [[disallowed-methods]]
 path = "std::io::stdout"
