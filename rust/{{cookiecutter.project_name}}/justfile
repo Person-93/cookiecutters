@@ -22,7 +22,7 @@ test *args:
 
 # Run clippy on the project
 [no-exit-message]
-clippy *args: (check "{{args}}")
+clippy *args:
   cargo clippy {{args}}
 
 # Build documentation using rustdoc
