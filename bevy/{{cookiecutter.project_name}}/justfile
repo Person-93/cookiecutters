@@ -4,6 +4,7 @@ import? 'local.justfile'
 
 flags := "--features=dev"
 alias lint := clippy
+alias y := why
 
 export CARGO_TARGET_DIR := "target/just"
 
@@ -48,3 +49,7 @@ cargo command *args:
 
 setup:
   pre-commit install --install-hooks -t pre-commit -t commit-msg
+
+# Show graph for why a specific dependency was included (uses cargo tree)
+why package:
+  cargo tree --target all --invert --package {{package}}
