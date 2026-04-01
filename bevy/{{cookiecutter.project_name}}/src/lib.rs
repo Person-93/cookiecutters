@@ -22,10 +22,6 @@ pub fn plugin(app: &mut App) {
         }),
         ..default()
       })
-      .set(AssetPlugin {
-        mode: AssetMode::Processed,
-        ..default()
-      })
       .set(ImagePlugin::default_nearest())
       .disable::<LogPlugin>(),
     EnhancedInputPlugin,
@@ -51,4 +47,3 @@ enum GameState {
   Loading,
   Playing,
 }
-

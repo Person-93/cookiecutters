@@ -18,7 +18,7 @@ dev = [
   "bevy/track_location",
 ]
 
-design = ["bevy/asset_processor", "bevy/file_watcher"]
+design = ["bevy/file_watcher"]
 
 [dependencies]
 bevy.workspace = true
