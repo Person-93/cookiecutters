@@ -8,7 +8,11 @@ mod camera;
 mod numeric_conversions;
 mod util;
 
-pub fn plugin(app: &mut App) {
+pub fn main() -> std::process::ExitCode {
+  App::new().add_plugin(plugin).run().report()
+}
+
+fn plugin(app: &mut App) {
   // setup logging early
   app.add_plugins(LogPlugin::default());
 
